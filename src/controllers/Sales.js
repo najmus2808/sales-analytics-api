@@ -1,4 +1,4 @@
-const SalesService = require("../services/SalesService");
+const SalesService = require("../services/Sales");
 
 const TotalRevenue = async (req, res) => {
   const result = await SalesService.TotalRevenue(req);
