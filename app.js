@@ -1,6 +1,5 @@
 // Basic Lib Import
 const express = require("express");
-const salesRoutes = require("./src/routes/api");
 const app = new express();
 
 // Security Middleware Lib Import
