@@ -1,6 +1,6 @@
 // Basic Lib Import
 const express = require("express");
-const salesRoutes = require("./src/routes/sales");
+const salesRoutes = require("./src/routes/api");
 const app = new express();
 
 // Security Middleware Lib Import
@@ -10,6 +10,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const cors = require("cors");
+const router = require("./src/routes/api");
 
 // Security Middleware Implement
 app.use(cors());
@@ -28,7 +29,7 @@ app.use(limiter);
 app.use("/", express.static(__dirname + "/public"));
 
 // Routing Implement
-app.use("/api/v1/sales", salesRoutes);
+app.use("/api/v1", router);
 
 // Undefined Route Implement
 app.use("*", (req, res) => {
