@@ -1,4 +1,4 @@
-const Sale = require("../models/SalesCollection");
+const Sale = require("../models/SalesModel");
 
 const TotalRevenue = async (req) => {
   try {
