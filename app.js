@@ -9,7 +9,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const cors = require("cors");
-const router = require("./src/routes/api");
+const router = require("./src/routes");
 
 // Security Middleware Implement
 app.use(cors());
